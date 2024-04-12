@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{%block content%}
+
+    
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+  <div class="container">
+    <div class="row justify-content-center mb-7 pb-5">
+      <div class="row justify-content-start pb-3">
+        <div class="col-md-12 heading-section ftco-animate">
+            <h1 class="big">Pitanja</h1>
+          <h2 class="mb-4">Pitanja</h2>
+          <br>
+        </div>
+        
+        <div class="col-md-9 order-md-last d-flex">
+          <form action="{% url 'pitanje'%}" method="POST" class="bg-light p-4 p-md-5 contact-form">
+            
+            {% csrf_token %}
+            <div class="form-group">
+              <center>{{form.as_p}}</center>
+            </div>
+            <div class="form-group">
+             <center> <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5"></center>
+         </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+      
+    
+  </section>
+          
+  
+    
+   
+
+
+{% endblock%}
+ <!--<div> <div class="row no-gutters block-9">
+    <div class="col-md-6 order-md-last d-flex">
+      <form action="{% url 'home'%}" method="post" class="bg-light p-4 p-md-5 contact-form">
+        {% csrf_token %}
+        <div class="form-group">
+        <label>Ime i Prezime</label>
+           {{form.name}}
+          
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+              {{form.email}}
+         
+        </div>
+        <div class="form-group">
+            <label>Kontakt Broj</label>
+             {{form.phone}}
+            
+          </div>
+        <div class="form-group">
+            <label>Naslov</label>
+            {{form.subject}}
+          
+        </div>
+        <div class="form-group">
+            <label>Pitanje</label>
+          {{form.message}}
+          
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+        </div>
+      </form>
+    
+    </div></div> -->

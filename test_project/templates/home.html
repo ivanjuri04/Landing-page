@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{%block content%}
+	
+<section id="home-section" class="hero">
+  <div class="home-slider  owl-carousel">
+    <div class="slider-item ">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+          <div class="one-third js-fullheight order-md-last img" style=" clip-path: circle(42%);  background-image:url(static/images/ww.jpg);">
+            <div class="overlay"></div>
+          </div>
+          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <div class="text">
+              
+              <h1 class="mb-4 mt-3">Mi smo <span>Metal Solin</span></h1>
+              <h2 class="mb-4">Najjebeniji bravari</h2>
+              <p><a href="{% url 'onama'%}" class="btn btn-primary py-3 px-4">O nama</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">Kontakt</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</section>
+
+
+
+
+
+{% endblock %}
